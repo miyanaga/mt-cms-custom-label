@@ -1,0 +1,69 @@
+<__trans_section component="CMSCustomLabel">
+
+<mtapp:LoadKnockoutJS>
+
+<style type="text/css">
+    #cms-custom-label-form {
+        margin: 8px 0px;
+        width: 480px;
+    }
+    #cms-custom-label-form .sort-tab {
+        position: relative;
+    }
+    #cms-custom-label-form .col {
+        width: 120px;
+    }
+    #cms-custom-label-form .col input {
+        width: 120px;
+    }
+    #cms-custom-label-form .col.sort {
+        width: 44px;
+    }
+</style>
+
+<h3><__trans phrase='Label Replacement Table'></h3>
+
+<p><__trans phrase="replacement_table_desc"></p>
+
+    <input type="hidden" name="dictionary" id="cms-custom-label-dictionary" value="<mt:var name='dictionary' escape='html'>" data-apply-to="#cms-custom-label-form">
+    
+    <table id="cms-custom-label-form" class="listing-table">
+        <thead>
+            <tr>
+                <th class="col head sort"></th>
+                <th class="col head textbox"><span class="col-label"><__trans phrase="Replace From"></span></th>
+                <th class="col head textbox"><span class="col-label"><__trans phrase="Replace To"></span></th>
+                <th class="col head control"></th>
+            </tr>
+        </thead>
+        <tbody data-bind="foreach:rows, sortable:{handle:'.sort-tab'}">
+            <tr>
+                <td class="col sort"><span class="sort-tab">&nbsp;</span></td>
+                <td class="col textbox"><input type="text" name="f" data-bind="value:f" value=""></td>
+                <td class="col textbox"><input type="text" name="t" data-bind="value:t" value=""></td>
+                <td class="col control">
+                    <a href="javascript:void(0)" data-bind="click:$root._copy" class="icon-left icon-download"><__trans phrase="Copy"></a>
+                    <a href="javascript:void(0)" data-bind="click:$root._remove" class="icon-left icon-remove"><__trans phrase="Remove"></a>
+                </td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr>
+                <td class="col sort"></td>
+                <td class="col textbox"></td>
+                <td class="col textbox"></td>
+                <td class="col control">
+                    <a href="javascript:void(0)" data-bind="click:_add" class="icon-left icon-plus"><__trans phrase="Add"></a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <script type="text/javascript">
+        jQuery(function($) {
+            $('#cms-custom-label-dictionary').knockoutTable();
+        });
+    </script>
+
+</mtapp:setting>
+</__trans_section>

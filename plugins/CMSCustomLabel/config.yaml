@@ -1,0 +1,34 @@
+name: <MT_TRANS phrase="CMSCustomLabel">
+id: CMSCustomLabel
+key: CMSCustomLabel
+author_link: http://www.ideamans.com/
+author_name: ideaman's Inc.
+# ' close quotation
+description: <MT_TRANS phrase="plugin_desc">
+version: 0.50
+
+settings:
+    dictionary:
+        Default: '{"rows":[]}'
+        Scloe: blog
+
+blog_config_template: blog_config.tmpl
+
+applications:
+    cms:
+        callbacks:
+            init_app: $CMSCustomLabel::MT::CMS::CustomLabel::init_app
+
+l10n_lexicon:
+    ja:
+        'CMSCustomLabel': '管理画面ラベルカスタマイズ'
+        'plugin_desc': 'ブログごとに管理画面のラベルをカスタマイズします。'
+        'Copy': 'コピー'
+        'Label Replacement Table': 'ラベル変換表'
+        'Replace From': '置換するラベル'
+        'Replace To': '置換後のラベル'
+        'replacement_table_desc': 'このブログを選択中の管理画面でのラベル置換ルールを定義します。長いラベルから順に置換されます。'
+    en_us:
+        'CMSCustomLabel': 'Management Screen Labels Customizer'
+        'plugin_desc': 'Customizes labels on CMS screen for each blogs.'
+        'replacement_table_desc': 'Define labels replacement rule on management screen during selecting this blog. Labels are replaced in an order from long one.'
