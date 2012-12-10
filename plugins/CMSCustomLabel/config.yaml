@@ -21,14 +21,14 @@ applications:
 
 l10n_lexicon:
     ja:
-        'CMSCustomLabel': '管理画面ラベルカスタマイズ'
-        'plugin_desc': 'ブログごとに管理画面のラベルをカスタマイズします。'
-        'Copy': 'コピー'
-        'Label Replacement Table': 'ラベル変換表'
-        'Replace From': '置換するラベル'
-        'Replace To': '置換後のラベル'
-        'replacement_table_desc': 'このブログを選択中の管理画面でのラベル置換ルールを定義します。長いラベルから順に置換されます。'
+        CMSCustomLabel: 管理画面ラベルカスタマイズ
+        plugin_desc: ブログごとに管理画面のラベルをカスタマイズします。
+        Copy: コピー
+        Label Replacement Table: ラベル変換表
+        Replace From: 置換するラベル
+        Replace To: 置換後のラベル
+        replacement_table_desc: このブログを選択中の管理画面でのラベル置換ルールを定義します。長いラベルから順に置換されます。
     en_us:
-        'CMSCustomLabel': 'Management Screen Labels Customizer'
-        'plugin_desc': 'Customizes labels on CMS screen for each blogs.'
-        'replacement_table_desc': 'Define labels replacement rule on management screen during selecting this blog. Labels are replaced in an order from long one.'
+        CMSCustomLabel: Management Screen Labels Customizer
+        plugin_desc: Customizes labels on CMS screen for each blogs.
+        replacement_table_desc: Define labels replacement rule on management screen during selecting this blog. Labels are replaced in an order from long one.
